@@ -49,6 +49,10 @@ task_context "JoystickTask" do
 
     property("device", "/std/string", "/dev/input/js0").
         doc("Path to the joystick device")
+    property("deadzone_size_locomotion", "double", 0).
+        doc("Size of locomotion deadzone. Set to 0 to effectively disable it.")
+    property("deadzone_size_ptu", "double", 0).
+        doc("Size of ptu deadzone. Set to 0 to effectively disable it.")
 
 end
 

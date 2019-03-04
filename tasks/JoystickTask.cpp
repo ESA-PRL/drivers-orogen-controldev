@@ -48,6 +48,9 @@ bool JoystickTask::configureHook()
     this->axisScale = _axisScale.get();
     assert(axisScale.size() == static_cast<unsigned int> (this->axisCount));
 
+    joystick->setDeadzoneSizeLocomotion(_deadzone_size_locomotion.get());
+    joystick->setDeadzoneSizePtu(_deadzone_size_ptu.get());
+
     return true;
 }
 
